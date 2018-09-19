@@ -1,0 +1,147 @@
+<div class="sort">
+  <div>Sort by</div>
+  <ngbd-dropdown (changeClothesItems)="onChange($event)"></ngbd-dropdown>
+</div>
+
+<ngb-carousel *ngIf="images">
+  <ng-template class="slide" ngbSlide>
+    <img class="bg-img" [src]="images[0]" alt="Random first slide">
+    <div class="carousel-caption">
+      <ul class="clothes-card-list">
+        <li class="clothes-card" *ngFor="let clothesItem of clothesItemsMen">
+          <div class="up-section">
+            <div *ngIf="!clothesItem.hasSize">10litri</div>
+            <div *ngIf="clothesItem.hasSize">
+              <div class="size">
+                <p>size</p>
+                <ngbd-size-dropdown></ngbd-size-dropdown>
+              </div>
+              <div class="colors">
+                <img [src]="clothesItem.colors">
+              </div>
+            </div>
+          </div>
+          <div class="photo">
+            <img [src]="clothesItem.image">
+          </div>
+          <div class="down-section">
+            <div class="name"><a [routerLink]="['/clothes', clothesItem.id]">{{clothesItem.name}}</a></div>
+            <div class="price">{{clothesItem.price | currency:'EUR'}}</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </ng-template>
+  <ng-template class="slide" ngbSlide>
+    <img class="bg-img" [src]="images[1]" alt="Random second slide">
+    <div class="carousel-caption">
+      <ul class="clothes-card-list">
+        <li class="clothes-card" *ngFor="let clothesItem of clothesItemsMen">
+          <div class="up-section">
+            <div *ngIf="!clothesItem.hasSize">10litri</div>
+            <div *ngIf="clothesItem.hasSize">
+              <div class="size">
+                <p>size</p>
+                <ngbd-size-dropdown></ngbd-size-dropdown>
+              </div>
+              <div class="colors">
+                <img [src]="clothesItem.colors">
+              </div>
+            </div>
+          </div>
+          <div class="photo">
+            <img [src]="clothesItem.image">
+          </div>
+          <div class="down-section">
+            <div class="name"><a [routerLink]="['/clothes', clothesItem.id]">{{clothesItem.name}}</a></div>
+            <div class="price">{{clothesItem.price | currency:'EUR'}}</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </ng-template>
+  <ng-template class="slide" ngbSlide>
+    <img class="bg-img" [src]="images[2]" alt="Random third slide">
+    <div class="carousel-caption">
+      <ul class="clothes-card-list">
+        <li class="clothes-card" *ngFor="let clothesItem of clothesItemsMen">
+          <div class="up-section">
+            <div *ngIf="!clothesItem.hasSize">10litri</div>
+            <div *ngIf="clothesItem.hasSize">
+              <div class="size">
+                <p>size</p>
+                <ngbd-size-dropdown></ngbd-size-dropdown>
+              </div>
+              <div class="colors">
+                <img [src]="clothesItem.colors">
+              </div>
+            </div>
+          </div>
+          <div class="photo">
+            <img [src]="clothesItem.image">
+          </div>
+          <div class="down-section">
+            <div class="name"><a [routerLink]="['/clothes', clothesItem.id]">{{clothesItem.name}}</a></div>
+            <div class="price">{{clothesItem.price | currency:'EUR'}}</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </ng-template>
+  <ng-template class="slide" ngbSlide>
+    <img class="bg-img" [src]="images[3]" alt="Random forth slide">
+    <div class="carousel-caption">
+      <ul class="clothes-card-list">
+        <li class="clothes-card" *ngFor="let clothesItem of clothesItemsMen">
+          <div class="up-section">
+            <div *ngIf="!clothesItem.hasSize">10litri</div>
+            <div *ngIf="clothesItem.hasSize">
+              <div class="size">
+                <p>size</p>
+                <ngbd-size-dropdown></ngbd-size-dropdown>
+              </div>
+              <div class="colors">
+                <img [src]="clothesItem.colors">
+              </div>
+            </div>
+          </div>
+          <div class="photo">
+            <img [src]="clothesItem.image">
+          </div>
+          <div class="down-section">
+            <div class="name"><a [routerLink]="['/clothes', clothesItem.id]">{{clothesItem.name}}</a></div>
+            <div class="price">{{clothesItem.price | currency:'EUR'}}</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </ng-template>
+  <ng-template class="slide" ngbSlide>
+    <img class="bg-img" [src]="images[4]" alt="Random fifth slide">
+    <div class="carousel-caption">
+      <ul class="clothes-card-list">
+        <li class="clothes-card" *ngFor="let clothesItem of clothesItemsMen">
+          <div class="up-section">
+            <div *ngIf="!clothesItem.hasSize">10litri</div>
+            <div *ngIf="clothesItem.hasSize">
+              <div class="size">
+                <p>size</p>
+                <ngbd-size-dropdown></ngbd-size-dropdown>
+              </div>
+              <div class="colors">
+                <img [src]="clothesItem.colors">
+              </div>
+            </div>
+          </div>
+          <div class="photo">
+            <img [src]="clothesItem.image">
+          </div>
+          <div class="down-section">
+            <div class="name"><a [routerLink]="['/clothes', clothesItem.id]">{{clothesItem.name}}</a></div>
+            <div class="price">{{clothesItem.price | currency:'EUR'}}</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </ng-template>
+</ngb-carousel>

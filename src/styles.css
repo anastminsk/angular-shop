@@ -1,0 +1,65 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '../node_modules/bootstrap/dist/css/bootstrap.css';
+
+@font-face {
+  font-family: 'Quicksand Bold';
+  src: url(./assets/fonts/Quicksand-Bold.woff) format('woff'),
+    url(./assets/fonts/Quicksand-Bold.ttf) format('truetype');
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  position: relative;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Quicksand Bold", Helvetica, sans-serif;
+  font-size: 16px;
+  color: #424242;
+  background-color: #fff;
+}
+
+ul {
+  list-style: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 50px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 12px;
+  height: 12px;
+}
+
+.carousel-control-prev-icon {
+  background-image: url('./assets/img/fa-chevron-left.png');
+}
+
+.carousel-control-next-icon {
+  background-image: url('./assets/img/fa-chevron-right.png');
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}

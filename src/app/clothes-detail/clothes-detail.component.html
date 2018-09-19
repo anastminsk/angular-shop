@@ -1,0 +1,40 @@
+<!--
+  <p>More details about clothes number {{clothesId}}</p>
+-->
+
+<div class="nav">
+  <div class="nav-items">
+    <img width="12" height="12" src="../../assets/img/fa-chevron-left.png">
+    <a [routerLink]="['/clothes']">Back to catalog</a>
+  </div>    
+</div>
+
+<div *ngFor="let clothesItem of clothesItems">
+  <div class="detail" *ngIf="clothesItem.id == clothesId">
+    <div class="detail-name">
+      <div>{{clothesItem.name}}</div>
+      <hr>
+    </div>
+    <div class="detail-block">
+      <div class="photo">
+        <img [src]="clothesItem.image">
+      </div>
+      <table class="options">
+        <tr>
+          <td class="option-info">{{clothesItem.price | currency:'EUR'}}</td>
+          <td class="option-name">price</td>
+        </tr>
+        <tr>
+          <td class="option-info" *ngIf="clothesItem.colors"><img [src]="clothesItem.colors"></td>
+          <td class="option-info" *ngIf="!clothesItem.colors">-</td>
+          <td class="option-name">colors</td>
+        </tr>
+        <tr>
+          <td class="option-info" *ngIf="clothesItem.hasSize">xs, s, m, l, xl, xxl</td>
+          <td class="option-info" *ngIf="!clothesItem.hasSize">-</td>
+          <td class="option-name">sizes</td>
+        </tr>
+      </table>
+    </div>  
+  </div> 
+</div>

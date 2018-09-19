@@ -1,0 +1,11 @@
+<div class="filter">
+  <div class="select-gender">
+    <input type="checkbox" id="men" value="men" checked [disabled]="flag" (click)="changeMenClothesDisplayed()" />
+    <label for="men">men</label>
+    <input type="checkbox" id="women" value="women" checked [disabled]="flag" (click)="changeWomenClothesDisplayed()" />
+    <label for="women">women</label>
+    <input type="checkbox" id="children" value="children" [disabled]="flag" />
+    <label for="children">children</label>
+  </div>
+  <button class="see-all" (click)="seeAllProducts()">See all products</button>
+</div>

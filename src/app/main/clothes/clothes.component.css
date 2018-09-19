@@ -1,0 +1,20 @@
+.block-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+
+.block-name > div {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.block-name hr {
+  width: 91%;
+  height: 2px;
+  border: none;
+  margin: 0;
+  color: #ccc;
+  background-color: #ccc;
+}
